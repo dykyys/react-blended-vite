@@ -46,16 +46,21 @@ export const Photos = () => {
     <>
       <Form onSubmit={handleSubmit} />
       {photos.length > 0 && <PhotosGallery photos={photos} />}
+
       {isMorePhotos && (
-        <Button onClick={handleLoadMore}>
+        <Button onClick={handleLoadMore} disabled={isLoading}>
           {isLoading ? 'Loading...' : 'Load more'}
         </Button>
       )}
 
       {isLoading && <Loader />}
 
-      {error && <Text>❌ Something went wrong - {error}</Text>}
-      {isEmpty && <Text>Sorry. There are no images ... 😭</Text>}
+      {error && (
+        <Text textAline="center">❌ Something went wrong - {error}</Text>
+      )}
+      {isEmpty && (
+        <Text textAline="center">Sorry. There are no images ... 😭</Text>
+      )}
     </>
   );
 };
