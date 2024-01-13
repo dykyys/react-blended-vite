@@ -1,11 +1,15 @@
-import style from './PhotosGalleryItem.module.css';
+import { GridItem } from 'components';
+import styles from './PhotosGalleryItem.module.css';
 
 export const PhotosGalleryItem = ({ avg_color, alt, src }) => {
   return (
-    <li className={style.item}>
-      <div className={style.thumb} color={avg_color}>
+    <GridItem>
+      <div
+        className={styles.thumb}
+        style={{ backgroundColor: avg_color, borderColor: avg_color }}
+      >
         <img src={src.large} alt={alt} />
       </div>
-    </li>
+    </GridItem>
   );
 };

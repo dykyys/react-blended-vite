@@ -1,12 +1,9 @@
 import style from './Text.module.css';
 
-export const Text = ({ children, textAline = 'text', marginBottom = '0' }) => {
-  console.log(
-    [style[textAline], style[`marginBottom${marginBottom}`]].join(' '),
-  );
+export const Text = ({ children, textAlign = 'text', marginBottom = '0' }) => {
   return (
     <p
-      className={[style[textAline], style[`marginBottom${marginBottom}`]].join(
+      className={[style[textAlign], style[`marginBottom${marginBottom}`]].join(
         ' ',
       )}
     >

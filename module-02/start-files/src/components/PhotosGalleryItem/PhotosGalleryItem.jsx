@@ -1,3 +1,3 @@
-export const PhotosGalleryItem = ({ avg_color, alt, src }) => {
+export const PhotosGalleryItem = () => {
   return <h3>PhotosGalleryItem</h3>;
 };

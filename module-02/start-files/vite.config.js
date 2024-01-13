@@ -10,6 +10,7 @@ export default defineConfig({
       styles: '/src/styles',
       tabs: '/src/tabs',
       apiService: '/src/apiService',
+      hooks: '/src/hooks',
     },
   },
 });

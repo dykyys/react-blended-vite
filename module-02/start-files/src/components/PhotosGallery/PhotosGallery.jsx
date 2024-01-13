@@ -1,5 +1,3 @@
-import style from './PhotosGallery.module.css';
-
-export const PhotosGallery = ({ photos }) => {
+export const PhotosGallery = () => {
   return <h3>PhotosGallery</h3>;
 };

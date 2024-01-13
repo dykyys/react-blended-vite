@@ -1,5 +1,5 @@
 import { getPhotos } from 'apiService/photos';
-import { Button, Form, Loader, PhotosGallery, Text } from 'components';
+import { Button, Loader, PhotosGallery, Text, Form } from 'components';
 import { useEffect, useState } from 'react';
 
 export const Photos = () => {
@@ -46,6 +46,9 @@ export const Photos = () => {
     <>
       <Form onSubmit={handleSubmit} />
       {photos.length > 0 && <PhotosGallery photos={photos} />}
+      {!photos.length && !isEmpty && (
+        <Text textAlign="center">Let`s begin search 🔎</Text>
+      )}
 
       {isMorePhotos && (
         <Button onClick={handleLoadMore} disabled={isLoading}>
@@ -56,10 +59,10 @@ export const Photos = () => {
       {isLoading && <Loader />}
 
       {error && (
-        <Text textAline="center">❌ Something went wrong - {error}</Text>
+        <Text textAlign="center">❌ Something went wrong - {error}</Text>
       )}
       {isEmpty && (
-        <Text textAline="center">Sorry. There are no images ... 😭</Text>
+        <Text textAlign="center">Sorry. There are no images ... 😭</Text>
       )}
     </>
   );

@@ -1,3 +1,5 @@
+import { Text } from 'components';
+
 export const Todos = () => {
-  return <div>Todos</div>;
+  return <Text textAlign="center">There are no any todos ...</Text>;
 };

@@ -1,6 +1,8 @@
+import style from './Button.module.css';
+
 export const Button = ({ children, onClick, disabled }) => {
   return (
-    <button onClick={onClick} disabled={disabled}>
+    <button className={style.button} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );

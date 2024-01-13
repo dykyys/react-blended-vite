@@ -1,5 +1,5 @@
 // import { FiSearch } from 'react-icons/fi';
 
-export const Form = ({ onSubmit }) => {
-  return <h3>Form</h3>;
+export const Form = () => {
+  return <h2>Form</h2>;
 };
