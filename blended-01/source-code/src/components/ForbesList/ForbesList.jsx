@@ -13,13 +13,14 @@ export const ForbesList = ({ list }) => {
 
       <ul className={style.list}>
         {list.map(({ avatar, name, capital, isIncrease }) => (
-          <ForbesListItem
-            key={name}
-            avatar={avatar}
-            name={name}
-            capital={capital}
-            isIncrease={isIncrease}
-          />
+          <li key={name} className={style.item}>
+            <ForbesListItem
+              avatar={avatar}
+              name={name}
+              capital={capital}
+              isIncrease={isIncrease}
+            />
+          </li>
         ))}
       </ul>
     </div>

@@ -21,7 +21,11 @@
     </h2>
   </div>
 
-  <ul className={style.list}>{/* Довільна кіл-сть FriendListItem */}</ul>
+  <ul className={style.list}>{
+   <li className={style.item}>
+    /* Довільна кіл-сть ForbesListItem */}
+    </li>
+    </ul>
 </div>
 ```
 
@@ -40,7 +44,7 @@
 Компонент повинен бути наступної структури.
 
 ```jsx
-<li className={style.item}>
+<>
   <img
     className={style.avatar}
     src="https://randomuser.me/api/portraits/men/32.jpg"
@@ -51,7 +55,7 @@
     35.7 <BiDollarCircle color="#2196f3" size={22} />
     {/* Тут має бути необхідна іконка зміни статку */}
   </span>
-</li>
+<>
 ```
 
 ## Приклад використання
