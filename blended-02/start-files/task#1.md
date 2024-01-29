@@ -10,7 +10,7 @@
 
 > Тут самі файли [Grid](./src/components/Grid/Grid.jsx)
 
-В проекті налаштовані Alias imports тому всі імпорти можна вказувати з папки
+В проекті налаштовані Alias imports тому імпорти можна вказувати з папки
 `components`
 
 ```jsx
