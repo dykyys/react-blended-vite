@@ -5,8 +5,8 @@
       "components/*": ["components/*"],
       "data/*": ["data/*"],
       "helpers/*": ["helpers/*"],
-      "styles/*": ["styles/*"]
-      // "pages/*": ["pages/*"]
+      "styles/*": ["styles/*"],
+      "reduxTodo/*": ["reduxTodo/*"]
     }
   },
   "include": ["src"]

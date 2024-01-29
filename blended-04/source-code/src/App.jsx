@@ -1,11 +1,33 @@
-import { Section, Container, Heading } from 'components';
+import { useSelector } from 'react-redux';
+import { selectTodos } from 'reduxTodo/selectors';
+import {
+  Section,
+  Container,
+  Header,
+  Form,
+  TodoList,
+  Text,
+  Filter,
+} from 'components';
 
 export const App = () => {
+  const todos = useSelector(selectTodos);
   return (
-    <Section>
-      <Container>
-        <Heading title="Task 1 Blog Card" bottom />
-      </Container>
-    </Section>
+    <>
+      <Header />
+      <Section>
+        <Container>
+          <Form />
+          {!todos.length ? (
+            <Text textAlign="center">Create your first todo😉</Text>
+          ) : (
+            <>
+              <Filter />
+              <TodoList />
+            </>
+          )}
+        </Container>
+      </Section>
+    </>
   );
 };

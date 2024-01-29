@@ -10,7 +10,7 @@ export default defineConfig({
       data: '/src/data',
       helpers: '/src/helpers',
       styles: '/src/styles',
-      // pages: '/src/pages',
+      reduxTodo: '/src/reduxTodo',
     },
   },
 });
