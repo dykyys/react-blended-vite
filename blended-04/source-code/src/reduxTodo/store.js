@@ -1,4 +1,4 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,
@@ -17,17 +17,13 @@ import filterReducer from './filterSlice';
 const persistConfig = {
   key: 'todos',
   storage,
-  blacklist: ['filter'],
+  whitelist: ['items'],
 };
 
-const rootReducer = combineReducers({
-  todos: todoReducer,
-  filter: filterReducer,
-});
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer(persistConfig, todoReducer);
 
 export const store = configureStore({
-  reducer: persistedReducer,
+  reducer: { todos: persistedReducer, filter: filterReducer },
 
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

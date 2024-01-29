@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { selectTodos } from 'reduxTodo/selectors';
+import { selectCurrentTodo, selectTodos } from 'reduxTodo/selectors';
 import {
   Section,
   Container,
@@ -8,16 +8,19 @@ import {
   TodoList,
   Text,
   Filter,
+  EditForm,
 } from 'components';
 
 export const App = () => {
   const todos = useSelector(selectTodos);
+  const isEdit = useSelector(selectCurrentTodo);
   return (
     <>
       <Header />
       <Section>
         <Container>
-          <Form />
+          {!isEdit ? <Form /> : <EditForm />}
+
           {!todos.length ? (
             <Text textAlign="center">Create your first todo😉</Text>
           ) : (

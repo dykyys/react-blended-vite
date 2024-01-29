@@ -9,3 +9,4 @@ export * from './TodoList/TodoList';
 export * from './Todo/Todo';
 export * from './Text/Text';
 export * from './Filter/Filter';
+export * from './EditForm/EditForm';
