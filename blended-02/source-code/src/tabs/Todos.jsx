@@ -19,7 +19,7 @@ export const Todos = () => {
     setTodos(prevTodos => prevTodos.filter(todo => todo.id !== id));
   };
 
-  const editTodo = todo => {
+  const handleEditTodo = todo => {
     setIsEditing(!isEditing);
     setCurrentTodo({ ...todo });
   };
@@ -80,7 +80,7 @@ export const Todos = () => {
           isEditing={isEditing}
           todos={todos}
           deleteTodo={deleteTodo}
-          editTodo={editTodo}
+          editTodo={handleEditTodo}
         />
       )}
     </>
