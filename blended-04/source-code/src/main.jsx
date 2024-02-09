@@ -5,12 +5,14 @@ import { App } from './App.jsx';
 import 'modern-normalize/modern-normalize.css';
 import './index.css';
 
-import { store } from 'reduxTodo/store';
+import { store, persistor } from 'reduxTodo/store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>
     </Provider>
   </React.StrictMode>,
 );

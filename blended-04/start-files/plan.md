@@ -34,11 +34,11 @@ npm install @reduxjs/toolkit react-redux redux-persist
 - Реалізуйте функціонал додавання однієї todo в Redux-state
 - Реалізуйте функціонал видалення однієї todo з Redux-state
 - Реалізуйте зберігання властивості `items` з основного `state` застосунку в
-  `local storage` використовуючи бібліотеку [redux-persist]
-
-  - використовуй цей
-    [конфіг](https://redux-toolkit.js.org/usage/usage-guide#use-with-redux-persist)
-    для `store`
+  `local storage` використовуючи бібліотеку
+  [redux-persist](https://www.npmjs.com/package/redux-persist)
+- використовуй цей
+  [конфіг](https://redux-toolkit.js.org/usage/usage-guide#use-with-redux-persist)
+  для `store`
 
 ### Опис компонента `<Todo/>`
 
