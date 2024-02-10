@@ -61,12 +61,6 @@
   color: var(--color-white);
 }
 
-.text {
-  font-size: 16px;
-  color: var(--color-primary);
-  font-weight: 500;
-}
-
 .currency {
   color: var(--color-accent);
 }

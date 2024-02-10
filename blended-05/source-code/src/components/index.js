@@ -8,4 +8,5 @@ export * from './GridItem/GridItem';
 export * from './RatesList/RatesList';
 export * from './ExchangeForm/ExchangeForm';
 export * from './ExchangeInfo/ExchangeInfo';
-export * from './GoBackBtn/GoBackBtn';
+export * from './SelectRates/SelectRates';
+export * from './Filter/Filter';

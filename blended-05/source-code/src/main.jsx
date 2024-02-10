@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { App } from './App.jsx';
-import { persistor, store } from 'reduxCurrency/store.js';
+import { persistor, store } from 'reduxState/store.js';
 import 'modern-normalize/modern-normalize.css';
 import './index.css';
 

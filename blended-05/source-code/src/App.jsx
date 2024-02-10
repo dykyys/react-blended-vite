@@ -3,8 +3,8 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { Header } from 'components';
 
-import { setBaseCurrensy } from 'reduxCurrency/currencySlice';
-import { fetchBaseCurrency } from 'reduxCurrency/operations';
+import { setBaseCurrensy } from 'reduxState/currency/currencySlice';
+import { fetchBaseCurrency } from 'reduxState/currency/operations';
 
 const Home = lazy(() => import('pages/Home'));
 const Rates = lazy(() => import('pages/Rates'));

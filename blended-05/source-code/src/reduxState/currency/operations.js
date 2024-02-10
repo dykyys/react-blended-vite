@@ -1,11 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getUserInfo, exchangeCurrency, latestSymbols } from 'service';
+import { getUserInfo, exchangeCurrency, latestRates } from 'service';
 
 export const fetchBaseCurrency = createAsyncThunk(
   'currency/fetchBaseCurrency',
   async (coords, thunkAPI) => {
     const state = thunkAPI.getState();
-    const { baseCurrency } = state;
+    const { baseCurrency } = state.currency;
 
     if (baseCurrency) {
       return thunkAPI.rejectWithValue('We already have base currency!');
@@ -34,13 +34,9 @@ export const fetchExchangeCurrency = createAsyncThunk(
 
 export const fetchLatestSymbols = createAsyncThunk(
   'currency/fetchLatestSymbols',
-  async (_, thunkAPI) => {
-    const state = thunkAPI.getState();
-    const { baseCurrency } = state;
-
+  async (baseCurrency, thunkAPI) => {
     try {
-      const data = await latestSymbols(baseCurrency);
-      console.log(data);
+      const data = await latestRates(baseCurrency);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

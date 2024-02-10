@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { selectExchangeInfo, selectIsError } from 'reduxCurrency/selectors';
+import { selectExchangeInfo, selectIsError } from 'reduxState/selectors';
 import {
   Container,
   ExchangeForm,
@@ -8,7 +8,7 @@ import {
   Loader,
   Section,
 } from 'components';
-import { selectIsLoading } from 'reduxCurrency/selectors';
+import { selectIsLoading } from 'reduxState/selectors';
 
 const Home = () => {
   const isLoading = useSelector(selectIsLoading);

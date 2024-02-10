@@ -10,7 +10,7 @@ const initialState = {
   exchangeInfo: null,
   isLoading: false,
   isError: null,
-  rates: null,
+  rates: [],
 };
 
 export const currencySlice = createSlice({
