@@ -48,7 +48,7 @@ export const currencySlice = createSlice({
         state.isLoading = false;
       })
       .addCase(fetchLatestSymbols.rejected, (state, { payload }) => {
-        state.rates = null;
+        state.rates = [];
         state.isError = payload;
         state.isLoading = false;
       }),

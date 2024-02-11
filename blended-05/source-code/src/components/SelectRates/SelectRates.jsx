@@ -33,20 +33,3 @@ export const SelectRates = ({ baseCurrency }) => {
     </div>
   );
 };
-{
-  /* <select
-          onChange={handleChange}
-          aria-label="select"
-          className={styles.select}
-          name="region"
-          defaultValue={baseCurrency}
-        >
-          {symbols.map(rate => {
-            return (
-              <option key={rate} value={rate}>
-                {rate}
-              </option>
-            );
-          })}
-        </select> */
-}

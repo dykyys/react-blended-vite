@@ -14,6 +14,6 @@ export const selectFilteredRates = createSelector(
       .filter(
         ([key]) => key !== baseCurrency && key.toLowerCase().includes(filter),
       )
-      .map(([key, value]) => ({ key, value }));
+      .map(([key, value]) => ({ key, value: (1 / value).toFixed(2) }));
   },
 );

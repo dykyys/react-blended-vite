@@ -11,9 +11,7 @@ export const Filter = () => {
       type="text"
       onChange={handelCahnge}
       placeholder="What currency are you looking for?🧐"
-      title="Request format USD"
       className={styles.input}
-      name="currency"
     />
   );
 };

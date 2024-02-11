@@ -30,24 +30,3 @@ export const ExchangeForm = () => {
     </form>
   );
 };
-
-{
-  /* <select
-  aria-label="select"
-  className={styles.select}
-  name="region"
-  onChange={onHandleChange}
-  required
-  defaultValue="default"
->
-  <option disabled value="default">
-    Select a region
-  </option>
-
-  {regions.map(({ id, name, value }) => (
-    <option key={id} value={value}>
-      {name}
-    </option>
-  ))}
-</select>; */
-}

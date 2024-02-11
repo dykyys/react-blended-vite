@@ -41,16 +41,14 @@ const Rates = () => {
             <Wave
               text={`$ $ $ Current exchange rate for 1 ${baseCurrency} $ $ $`}
               effect="fadeOut"
-              effectChange={3.0}
+              effectChange={4.0}
             />
           }
         />
 
-        {rates && <Filter />}
+        {rates.length > 0 && <Filter />}
 
-        {fileredRates?.length > 0 && (
-          <RatesList rates={fileredRates} baseCurrency={baseCurrency} />
-        )}
+        {fileredRates.length > 0 && <RatesList rates={fileredRates} />}
         {isLoading && <Loader />}
         {isError && (
           <Heading
