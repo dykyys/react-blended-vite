@@ -3,7 +3,7 @@ import styles from './ExchangeForm.module.css';
 
 export const ExchangeForm = () => {
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form}>
       <button className={styles.button} type="submit">
         <RiExchangeDollarFill className={styles.icon} />
       </button>
