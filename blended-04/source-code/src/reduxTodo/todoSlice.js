@@ -27,6 +27,7 @@ export const todoSlice = createSlice({
           ? { text: payload, id: state.currentTodo.id }
           : item;
       });
+      state.currentTodo = null;
     },
   },
 });

@@ -57,9 +57,6 @@ npm install @reduxjs/toolkit react-redux redux-persist
     <button className={style.deleteButton} type="button">
       <RiDeleteBinLine size={24} />
     </button>
-    <button className={style.editButton} type="button">
-      <RiEdit2Line size={24} />
-    </button>
   </div>
 </GridItem>
 ```
@@ -96,3 +93,45 @@ npm install @reduxjs/toolkit react-redux redux-persist
   filter: '',
 }
 ```
+
+Компонент `<Todo/>` буде мати наступний вигляд
+
+```jsx
+<GridItem>
+  <div className={style.box}>
+    <Text textAlign="center" marginBottom="20">
+      TODO # 1
+    </Text>
+
+    <Text>Text todo 1</Text>
+    <button className={style.deleteButton} type="button">
+      <RiDeleteBinLine size={24} />
+    </button>
+    <button className={style.editButton} type="button">
+      <RiEdit2Line size={24} />
+    </button>
+  </div>
+</GridItem>
+```
+
+При натисканні на кнопку редагування в Redux-state буде записуватися поточна
+todo для редагування.
+
+Додайте умову в Арр для відображення форми додавання todo або редагування
+
+```jsx
+{
+  !isEdit ? <Form /> : <EditForm />;
+}
+```
+
+В компоненті ` <EditForm />` початкове значення в інпуті повинен бути текст
+поточної todo для редагування.
+
+При натисканні кнопки відміннити todo не редагуємо в Redux-state для currentTodo
+записуємо null
+
+При сабміті форми оновляємо дані в Redux-state і у властивість currentTodo
+вказуємо null.
+
+На цьому етапі завдання завершене - вітаю🎉

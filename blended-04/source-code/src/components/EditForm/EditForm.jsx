@@ -3,7 +3,7 @@ import { RiSaveLine } from 'react-icons/ri';
 import { MdOutlineCancel } from 'react-icons/md';
 
 import style from './EditForm.module.css';
-import { addCurrentTodo, updateTodo } from 'reduxTodo/todoSlice';
+import { addCurrentTodo } from 'reduxTodo/todoSlice';
 import { selectCurrentTodo } from 'reduxTodo/selectors';
 
 export const EditForm = () => {
@@ -15,7 +15,6 @@ export const EditForm = () => {
     event.preventDefault();
     const { value } = event.target.elements.text;
     dispatch(updateTodo(value));
-    dispatch(addCurrentTodo(null));
   };
 
   return (
