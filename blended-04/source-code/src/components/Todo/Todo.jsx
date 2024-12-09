@@ -12,6 +12,7 @@ export const Todo = ({ id, counter, text }) => {
   const handleDelete = () => {
     dispatch(deleteTodo(id));
   };
+
   return (
     <div className={style.box}>
       <Text textAlign="center" marginBottom="20">

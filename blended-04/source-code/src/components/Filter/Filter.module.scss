@@ -23,9 +23,13 @@
     font-weight: 200;
     color: var(--color-gray);
   }
+
+  &:is(:focus, :focus) {
+    box-shadow: var(--shadow-regular);
+  }
 }
 
-.input:hover,
+/* .input:hover,
 .input:focus {
   box-shadow: var(--shadow-regular);
-}
+}  */

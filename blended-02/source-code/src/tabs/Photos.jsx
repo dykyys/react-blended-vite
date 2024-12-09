@@ -15,7 +15,7 @@ export const Photos = () => {
     if (!query) return;
     setIsLoading(true);
 
-    getPhotos(query, page)
+    (query, page)
       .then(({ photos, total_results, per_page }) => {
         if (!photos.length) {
           setIsEmpty(true);

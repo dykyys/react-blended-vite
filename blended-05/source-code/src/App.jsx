@@ -11,6 +11,7 @@ const Rates = lazy(() => import('pages/Rates'));
 
 export const App = () => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     const options = {
       enableHighAccuracy: true,
@@ -28,6 +29,7 @@ export const App = () => {
 
     navigator.geolocation.getCurrentPosition(success, error, options);
   }, [dispatch]);
+
   return (
     <Routes>
       <Route path="/" element={<Header />}>
