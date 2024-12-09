@@ -6,6 +6,7 @@ import 'modern-normalize/modern-normalize.css';
 import './index.css';
 
 import { store, persistor } from 'reduxTodo/store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

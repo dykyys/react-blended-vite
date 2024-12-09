@@ -13,7 +13,6 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const data = await getCountries();
-
         setCountries(data);
       } catch (error) {
         console.error(error);

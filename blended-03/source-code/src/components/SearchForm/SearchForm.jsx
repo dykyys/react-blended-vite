@@ -5,7 +5,7 @@ import styles from './SearchForm.module.css';
 
 const regions = [
   { id: 'africa', value: 'africa', name: 'Africa' },
-  { id: 'america', value: 'america', name: 'America' },
+  { id: 'americas', value: 'americas', name: 'America' },
   { id: 'asia', value: 'asia', name: 'Asia' },
   { id: 'europe', value: 'europe', name: 'Europe' },
   { id: 'oceania', value: 'oceania', name: 'Oceania' },

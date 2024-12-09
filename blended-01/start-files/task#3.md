@@ -21,11 +21,9 @@
     </h2>
   </div>
 
-  <ul className={style.list}>{
-   <li className={style.item}>
-    /* Довільна кіл-сть ForbesListItem */}
-    </li>
-    </ul>
+  <ul className={style.list}>
+    <li className={style.item}>{/* Довільна кіл-сть ForbesListItem */}</li>
+  </ul>
 </div>
 ```
 
@@ -55,7 +53,7 @@
     35.7 <BiDollarCircle color="#2196f3" size={22} />
     {/* Тут має бути необхідна іконка зміни статку */}
   </span>
-<>
+</>
 ```
 
 ## Приклад використання
